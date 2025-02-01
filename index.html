@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edu.lamponescu.uk</title>
+    <style>
+        /* Resetare stiluri implicite */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .animated-title {
+            font-size: 3rem;
+            color: white;
+            animation: fadeIn 2s ease-in-out, float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .manual-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .manual-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .manual-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .manual-card p {
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.2rem;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .manual-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animated-title">edu.lamponescu.uk</h1>
+    </header>
+    <main>
+        <div class="grid-container">
+            <!-- Manuale -->
+            <div class="manual-card" style="animation-delay: 0.1s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Limba%20si%20literatura%20romana/Uy5DLiBBUlQgS0xFVFQg/#book/0-help" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A906.png" alt="Limba și literatura română">
+                    <p>Limba și literatura română</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.2s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Limba%20moderna%202%20franceza/Qk9PS0xFVCBTLlIuTA/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A904.png" alt="Franceza">
+                    <p>Franceza</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.3s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Matematica/SU5UVUlURVhUICBTLlIu/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A895.png" alt="Matematica">
+                    <p>Matematica</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.4s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Fizica/Uy5DLiBHUlVQIEVESVRP/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A893.png" alt="Fizica">
+                    <p>Fizica</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.5s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Chimie/Uy5DLiBBUlQgS0xFVFQg/#book/0-help" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A909.png" alt="Chimie">
+                    <p>Chimie</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.6s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Istorie/Uy5DLiBDLkQuIFBSRVNT/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A897.png" alt="Istorie">
+                    <p>Istorie</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.7s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Geografie/RURJVFVSQSBESURBQ1RJ/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A921.png" alt="Geografie">
+                    <p>Geografie</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.8s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Biologie/Uy5DLiBDRCBQUkVTUyBT/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A926.png" alt="Biologie">
+                    <p>Biologie</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 0.9s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Limba%20moderna%201%20intensiv%20engleza/Uy5DLiBBUlQgS0xFVFQg/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A883.png" alt="Limba Engleza">
+                    <p>Limba Engleza</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 1s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Educatie%20tehnologica%20si%20aplicatii%20practice/Uy5DLiBHUlVQIEVESVRP/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A924.png" alt="Educatie tehnologica si aplicatii practice">
+                    <p>Educatie tehnologica si aplicatii practice</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 1.1s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Educatie%20sociala/Uy5DLiBDRCBQUkVTUyBT/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A913.png" alt="Educatie Sociala">
+                    <p>Educatie Sociala</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 1.2s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Educatie%20muzicala/Uy5DLiBBUlQgS0xFVFQg/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A881.png" alt="Educatie Muzicala">
+                    <p>Educatie Muzicala</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 1.3s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Religie%20Cultul%20Ortodox/RURJVFVSQSBESURBQ1RJ/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A890.png" alt="Religie">
+                    <p>Religie</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 1.4s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Informatica%20si%20TIC/Uy5DLiBBUlQgS0xFVFQg/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A912.png" alt="Informatica si Tic">
+                    <p>Informatica si Tic</p>
+                </a>
+            </div>
+            <div class="manual-card" style="animation-delay: 1.5s;">
+                <a href="https://manuale.edu.ro/manuale/Clasa%20a%20VIII-a/Educatie%20plastica/Uy5DLiBHUlVQIEVESVRP/" target="_blank">
+                    <img src="https://www.manuale.edu.ro/assets/img/manuale/A900.png" alt="Educatie plastica">
+                    <p>Educatie plastica</p>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
